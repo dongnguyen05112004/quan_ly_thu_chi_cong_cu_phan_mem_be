@@ -1,9 +1,13 @@
 <?php
 
-use App\Http\Controllers\tietKiemCOntroller;
+use App\Http\Controllers\TietKiemController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::post('/khach-hang/don-hang/data-chi-tiet', [tietKiemCOntroller::class, 'gettietkiem']);
+Route::get('/canhan/tietkiem/data', [TietKiemController::class, 'getdata']);
+Route::post('/canhan/tietkiem/them', [TietKiemController::class, 'themTietKiem']);
+Route::post('/canhan/tietkiem/sua', [TietKiemController::class, 'suaTietKiem']);
+Route::post('/canhan/tietkiem/xoa', [TietKiemController::class, 'xoaTietKiem']);
+
 
 
