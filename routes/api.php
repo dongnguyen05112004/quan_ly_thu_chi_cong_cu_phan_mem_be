@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NoController;
 use App\Http\Controllers\TaiKhoanController;
 use App\Http\Controllers\thunhapController;
 use App\Http\Controllers\TietKiemController;
@@ -10,7 +11,11 @@ Route::get('/canhan/thunhap/data', [thunhapController::class, 'getThuNhap']);
 Route::post('/canhan/thunhap/them', [thunhapController::class, 'themThuNhap']);
 Route::post('/canhan/thunhap/sua', [thunhapController::class, 'suaThuNhap']);
 Route::post('/canhan/thunhap/xoa', [thunhapController::class, 'xoaThuNhap']);
-
+//no
+Route::get('/canhan/no/data', [NoController::class, 'getNo']);
+Route::post('/canhan/no/them', [NoController::class, 'themNo']);
+Route::post('/canhan/no/sua', [NoController::class, 'suaNo']);
+Route::post('/canhan/no/xoa', [NoController::class, 'xoaNo']);
 //tiet kiem
 Route::get('/canhan/tietkiem/data', [TietKiemController::class, 'getdata']);
 Route::post('/canhan/tietkiem/them', [TietKiemController::class, 'themTietKiem']);

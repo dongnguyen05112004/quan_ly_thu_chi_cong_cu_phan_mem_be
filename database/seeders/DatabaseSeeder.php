@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(tietkiemseeder::class);
         $this->call(chitieuSeeder::class);
         $this->call(thunhapSeeder::class);
+        $this->call(NoSeeder::class);
         $this->call(TaiKhoanSeeder::class);
     }
 }
