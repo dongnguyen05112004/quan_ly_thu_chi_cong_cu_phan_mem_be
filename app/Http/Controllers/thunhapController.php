@@ -20,6 +20,7 @@ class thunhapController extends Controller
         $thunhap = thunhap::create($data);
 
         return response()->json([
+            'status' => true,
             'message' => 'Thêm thu nhap thành công',
             'data' => $thunhap
         ]);
@@ -30,7 +31,10 @@ class thunhapController extends Controller
         $thunhap = thunhap::where('ma_thu', $request->ma_thu)->first();
         if ($thunhap) {
             $thunhap->update($request->all());
-            return response()->json(['message' => 'Cập nhật thành công', 'data' => $thunhap]);
+            return response()->json([
+                'status' => true,
+                'message' => 'Cập nhật thành công',
+                'data' => $thunhap]);
         }
         return response()->json(['message' => 'Không tìm thấy thu nhập']);
     }
@@ -40,8 +44,13 @@ class thunhapController extends Controller
         $thunhap = thunhap::where('ma_thu', $request->ma_thu)->first();
         if ($thunhap) {
             $thunhap->delete();
-            return response()->json(['message' => 'Xóa thành công']);
+            return response()->json([
+                'message' => 'Xóa thành công',
+                'status' => true
+            ]);
         }
-        return response()->json(['message' => 'Không tìm thấy thu nhập']);
+        return response()->json([
+            'message' => 'Không tìm thấy thu nhập'
+        ]);
     }
 }
