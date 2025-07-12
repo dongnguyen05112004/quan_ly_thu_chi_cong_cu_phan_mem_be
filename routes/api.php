@@ -23,5 +23,10 @@ Route::post('/canhan/tietkiem/sua', [TietKiemController::class, 'suaTietKiem']);
 Route::post('/canhan/tietkiem/xoa', [TietKiemController::class, 'xoaTietKiem']);
 // dang nhap
 Route::post('/khach-hang/dang-nhap', [TaiKhoanController::class, 'DangNhap']);
+Route::get('/khach-hang/get-data', [TaiKhoanController::class, 'getdata']);
+Route::post('/khach-hang/sua-profile', [TaiKhoanController::class, 'suaprofile']);
+Route::post('/khach-hang/doi-password', [TaiKhoanController::class, 'doipassword']);
+Route::post('/dang-ky', [TaiKhoanController::class, 'Dangky']);
+
 
 

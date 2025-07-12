@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('ten_nguoi_dung');
             $table->string('sdt');
             $table->string('email');
-            $table->string('avatar');
+            $table->string('avatar')->default('');
+            $table->timestamps();
         });
     }
     public function down(): void
