@@ -29,7 +29,7 @@ class TietKiemController extends Controller
 
     public function suaTietKiem(tietkiemRequest $request)
     {
-        $tietKiem = TietKiem::where('ma_tiet_kiem', $request->ma_tiet_kiem)->first();
+        $tietKiem = tietkiem::where('ma_tiet_kiem', $request->ma_tiet_kiem)->first();
         if ($tietKiem) {
             $tietKiem->update($request->all());
             return response()->json([
