@@ -12,7 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('chitieus', function (Blueprint $table) {
-            $table->id();
+             $table->id();
+            $table->string('ma_chi')->unique();
+            $table->string('ten_chi_tieu');
+            $table->string('danh_muc')->nullable();
+            $table->decimal('so_tien', 15, 2);
+            $table->date('ngay');
+            $table->text('mo_ta')->nullable();
             $table->timestamps();
         });
     }

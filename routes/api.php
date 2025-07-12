@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BaoCaoController;
 use App\Http\Controllers\TaiKhoanController;
 use App\Http\Controllers\thunhapController;
 use App\Http\Controllers\TietKiemController;
@@ -18,5 +19,8 @@ Route::post('/canhan/tietkiem/sua', [TietKiemController::class, 'suaTietKiem']);
 Route::post('/canhan/tietkiem/xoa', [TietKiemController::class, 'xoaTietKiem']);
 // dang nhap
 Route::post('/khach-hang/dang-nhap', [TaiKhoanController::class, 'DangNhap']);
+
+//baocao
+Route::get('/canhan/baocao', [BaoCaoController::class, 'getBaoCao']);
 
 
