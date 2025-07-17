@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('ma_tiet_kiem')->unique();
             $table->string('ma_tai_khoan');
-            $table->string('ma_tvgd');
             $table->date('ngay_bat_dau');
             $table->date('ngay_ket_thuc');
             $table->string('lai_suat');

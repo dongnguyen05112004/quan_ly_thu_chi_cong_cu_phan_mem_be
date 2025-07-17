@@ -11,11 +11,9 @@ class tietkiem extends Model
     protected $fillable = [
         'ma_tiet_kiem',
         'ma_tai_khoan',
-        'ma_tvgd',
         'ngay_bat_dau',
         'ngay_ket_thuc',
         'lai_suat'
     ];
-
     public $timestamps = true;
 }
