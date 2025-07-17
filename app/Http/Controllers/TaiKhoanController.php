@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DangKyRequesr;
+use App\Http\Requests\DangKyRequest;
+use App\Http\Requests\DoiMatKhauRequest;
 use App\Models\TaiKhoan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -57,7 +60,7 @@ class TaiKhoanController extends Controller
             ]);
         }
     }
-    public function doipassword(Request $request)
+    public function doipassword(DoiMatKhauRequest $request)
     {
         $user = Auth::guard('sanctum')->user();
         $data = TaiKhoan::where('id', $user->id)
@@ -78,7 +81,7 @@ class TaiKhoanController extends Controller
             ]);
         }
     }
-    public function Dangky(Request $request)
+    public function Dangky(DangKyRequest $request)
     {
         TaiKhoan::create([
             'ten_tai_khoan' => $request->ten_tai_khoan,
